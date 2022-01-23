@@ -30,10 +30,6 @@ fn get_next_theme(theme: &str) -> &str {
     }
 }
 
-// fn get_requested_with<'a>(req: &'a web::HttpRequest) -> Option<&'a str> {
-//     req.headers().get("x-requested-with")?.to_str().ok()
-// }
-
 async fn index(req: web::HttpRequest, query: web::Query<Query>) -> Result<HttpResponse> {
     let theme = match &query.theme {
         Some(theme) => theme.clone(),

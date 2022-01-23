@@ -423,6 +423,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+@font-face {
+  font-family: "Roboto Mono";
+
+  font-weight: 400;
+
+  src: url("/public/assets/fonts/RobotoMono-Regular.ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+
+  font-weight: 700;
+
+  src: url("/public/assets/fonts/RobotoMono-Bold.ttf");
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -485,10 +505,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 4rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .block {
   display: block;
 }
@@ -525,10 +541,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -545,12 +557,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-20 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 
 .rounded-full {
@@ -683,13 +689,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:hover\:bg-neutral-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
-@media (min-width: 640px) {
-  .sm\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 }
 
 @media (min-width: 768px) {
