@@ -1,45 +1,77 @@
-{% extends "layout.html"%}
-{% block title %}Pluto{% endblock %}
-{% block content %}
+{% extends "layout.html"%} {% block title %}Pluto{% endblock %} {% block content %}
 <div class="max-w-2xl mx-auto">
-<header class="flex justify-between items-center shadow-md rounded-b-lg p-6 dark:bg-zinc-900">
-	<a href="/" class="text-brand font-bold text-lg">pluto</a>
-	<form method="post" class="flex space-x-2 items-center" id="theme-form" enctype="application/x-www-form-urlencodeds">
-		<noscript>
-			<a type="submit" class="bg-neutral-900 dark:bg-white block w-8 h-8 rounded-full ring-brand peer-focus:ring-2 cursor-pointer" href="?theme={{next_theme}}"></a>
-			<style>
-				#theme-input-label {
-					display: none
-				}
-			</style>
-		</noscript>
-		<input class="peer opacity-0 absolute -z-10" id="theme-input" type="checkbox" name="theme" value="{{next_theme}}" checked>
-		<label id="theme-input-label" for="theme-input" class="bg-neutral-900 dark:bg-white block w-8 h-8 rounded-full ring-brand peer-focus:ring-2 cursor-pointer"></label>
-	</form>
-</header>
-<main class="flex flex-col space-y-8 mt-16 px-4 md:px-0">
-	<h1 class="text-brand text-5xl font-bold">My projects</h1>
-	<ul class="flex flex-col space-y-4">
-		<li>
-			<a href="https://haunted.pluto.uz" class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200">
-				<span class="text-brand text-lg">Haunted House</span>
-				<span class="text-gray-600 dark:text-gray-400 text-sm">December 20, 2021</span>
-			</a>
-		</li>
-		<li>
-			<a href="https://galaxy.pluto.uz" class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200">
-				<span class="text-brand text-lg">Galaxy</span>
-				<span class="text-gray-600 dark:text-gray-400 text-sm">January 10, 2022</span>
-			</a>
-		</li>
-		<li>
-			<a href="https://portfolio.pluto.uz" class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200">
-				<span class="text-brand text-lg">Portfolio</span>
-				<span class="text-gray-600 dark:text-gray-400 text-sm">February 4, 2022</span>
-			</a>
-		</li>
-	</ul>
-</main>
+  <header class="flex justify-between items-center shadow-md rounded-b-lg p-6 dark:bg-zinc-900">
+    <a href="/" class="text-brand font-bold text-lg">pluto</a>
+    <form
+      method="post"
+      class="flex space-x-2 items-center"
+      id="theme-form"
+      enctype="application/x-www-form-urlencodeds"
+    >
+      <noscript>
+        <a
+          type="submit"
+          class="bg-neutral-900 dark:bg-white block w-8 h-8 rounded-full ring-brand peer-focus:ring-2 cursor-pointer"
+          href="?theme={{next_theme}}"
+        ></a>
+        <style>
+          #theme-input-label {
+            display: none;
+          }
+        </style>
+      </noscript>
+      <input
+        class="peer opacity-0 absolute -z-10"
+        id="theme-input"
+        type="checkbox"
+        name="theme"
+        value="{{next_theme}}"
+        checked
+      />
+      <label
+        id="theme-input-label"
+        for="theme-input"
+        class="bg-neutral-900 dark:bg-white block w-8 h-8 rounded-full ring-brand peer-focus:ring-2 cursor-pointer"
+      ></label>
+    </form>
+  </header>
+  <main class="flex flex-col space-y-8 mt-16 px-4 md:px-0">
+    <h1 class="text-brand text-5xl font-bold">My projects</h1>
+    <ul class="flex flex-col space-y-6">
+      <li class="space-y-2">
+        <span class="dark:text-gray-400 text-sm">THREE.JS</span>
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="https://haunted.pluto.uz"
+              class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200"
+            >
+              <span class="text-brand text-lg">Haunted House</span>
+              <span class="text-gray-600 dark:text-gray-400 text-sm">December 20, 2021</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://galaxy.pluto.uz"
+              class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200"
+            >
+              <span class="text-brand text-lg">Galaxy</span>
+              <span class="text-gray-600 dark:text-gray-400 text-sm">January 10, 2022</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://portfolio.pluto.uz"
+              class="p-4 flex justify-between items-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800 duration-200"
+            >
+              <span class="text-brand text-lg">Portfolio</span>
+              <span class="text-gray-600 dark:text-gray-400 text-sm">February 4, 2022</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
 </div>
 <script defer src="/public/js/index.js"></script>
 {% endblock %}
